@@ -19,6 +19,11 @@ Authentication & Account Management:
 * Donation history tracker calculating donor cooldown periods and next eligible donation dates.
 
 2. Description of main projects
+System Architecture Overview
 <img width="5814" height="8192" alt="Blood Donation Request Flow-2026-07-22-205233" src="https://github.com/user-attachments/assets/f801f461-7dbd-4756-8626-ab02ac7a7884" />
+
+Application Workflow Diagram
+<img width="8192" height="2491" alt="wk" src="https://github.com/user-attachments/assets/4aa733d1-42db-480a-a4d8-27c6c54977ad" />
+
 
 
