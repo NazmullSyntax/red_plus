@@ -32,6 +32,8 @@ Technology Stack::
 Database Schema Structure::
 
 users Collection
+
+
 {
   "uid": "STRING (Primary Key)",
   "fullName": "STRING",
@@ -44,6 +46,8 @@ users Collection
 }
 
 requests Collection:
+
+
 {
   "requestId": "STRING (Primary Key)",
   "requesterId": "STRING (Foreign Key -> users.uid)",
@@ -56,12 +60,30 @@ requests Collection:
 }
 
 # Main Gateway Dashboard for RedPulse.
+
+
 <img width="775" height="1599" alt="hm" src="https://github.com/user-attachments/assets/5aa5b512-1dd8-47d7-8a6b-6c62a1e4e7c7" />
 
 * Smart Routing: Directs users into two distinct workflows—"Continue as a Donor" (to view requests and donate) or "Continue as a Patient" (to request blood).
 * Live Status: The LIVE pulse indicator confirms real-time connection to active blood requests.
 
 Personalized UX: Features dynamic user greetings and an interactive health-tip carousel to boost engagement.
+
+
+# User Profile Dashboard (My Profile) for RedPulse.
+
+Key Components & Functions
+* User Identity Card: Displays the user's avatar (with an edit shortcut), full name (Ahmed Emon), role tag (DONOR), email, and contact number.
+* Quick Health & App Stats:
+
+Blood Group: Displays donor blood type (O+).
+
+Status: Shows current availability (Active).
+
+Joined Year: Tracks membership history (2024).
+
+* Settings Navigation: Quick access links to Edit Profile, Notifications, Privacy & Security, and Help & Support.
+
 
 
 
