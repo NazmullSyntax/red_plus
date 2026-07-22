@@ -72,6 +72,10 @@ Personalized UX: Features dynamic user greetings and an interactive health-tip c
 
 # User Profile Dashboard (My Profile) for RedPulse.
 
+
+<img width="791" height="1600" alt="pf" src="https://github.com/user-attachments/assets/428bca08-df51-4225-a175-fb6d4532e18c" />
+
+
 Key Components & Functions
 * User Identity Card: Displays the user's avatar (with an edit shortcut), full name (Ahmed Emon), role tag (DONOR), email, and contact number.
 * Quick Health & App Stats:
@@ -83,6 +87,54 @@ Status: Shows current availability (Active).
 Joined Year: Tracks membership history (2024).
 
 * Settings Navigation: Quick access links to Edit Profile, Notifications, Privacy & Security, and Help & Support.
+
+# Emergency Blood Request / Send SOS Screen for RedPulse.
+
+<img width="785" height="1600" alt="so" src="https://github.com/user-attachments/assets/15b28946-d1fb-43d3-90c3-cbe463638620" />
+
+Header: Prominently marked as "Emergency Blood Request" to highlight high urgency.
+
+Input Fields:
+
+Blood Type (*): Dropdown to select the required blood group (e.g., A+, O-).
+
+Need (*): Dropdown to specify required units or components (e.g., Whole Blood, Platelets).
+
+Location (*): Area/city selection for geo-targeting nearby donors.
+
+Hospital (*): Target medical facility where blood is needed.
+
+Phone Number (*): Contact details for direct communication.
+
+Call-To-Action: "Send SOS Now" button triggers instant push notifications/alerts to all active matching donors in the selected area.
+
+
+# SOS Requests Feed / Donor Response Screen for RedPulse
+
+<img width="791" height="1600" alt="sd" src="https://github.com/user-attachments/assets/4775be21-bf0d-4f68-9637-1fa1f2f7c4e9" />
+
+Live Feed & Refresh: Displays active emergency blood requests in real-time, with a top-right refresh button to update the list.
+
+Request Cards Detail:
+
+Patient/Requester Info: Shows who requested the blood (e.g., Rajwan Ahamed, Fahim).
+
+Required Blood Group: Highlighted blood type needed (e.g., A-, B+).
+
+Hospital Location: Specific location and facility (e.g., Uttara, Ibn Sina Uttara).
+
+Time Elapsed: Time since the SOS was issued (e.g., 51 minutes ago).
+
+Response Tracker: Shows how many donors have already responded (e.g., RESPONSES: 1).
+
+Action Shortcuts:
+
+Responded Button: Indicates the user has already opted in to respond to this request.
+
+Message Icon (Blue): In-app chat button to communicate directly with the requester.
+
+Call Icon (Green): Quick action button to initiate a direct phone call to the requester.
+
 
 
 
