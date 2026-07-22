@@ -25,5 +25,45 @@ System Architecture Overview
 Application Workflow Diagram
 <img width="8192" height="2491" alt="wk" src="https://github.com/user-attachments/assets/4aa733d1-42db-480a-a4d8-27c6c54977ad" />
 
+Technology Stack::
+
+<img width="764" height="497" alt="tech" src="https://github.com/user-attachments/assets/95dde4f1-509a-4b72-beab-684df7c270fd" />
+
+Database Schema Structure::
+
+users Collection
+{
+  "uid": "STRING (Primary Key)",
+  "fullName": "STRING",
+  "email": "STRING",
+  "phone": "STRING",
+  "bloodGroup": "STRING (e.g. O+)",
+  "location": "GEOPOLYGON / STRING",
+  "isDonor": "BOOLEAN",
+  "lastDonationDate": "TIMESTAMP"
+}
+
+requests Collection:
+{
+  "requestId": "STRING (Primary Key)",
+  "requesterId": "STRING (Foreign Key -> users.uid)",
+  "patientName": "STRING",
+  "bloodGroupNeeded": "STRING",
+  "unitsNeeded": "INTEGER",
+  "hospitalName": "STRING",
+  "status": "STRING (Pending / Fulfilled / Cancelled)",
+  "createdAt": "TIMESTAMP"
+}
+
+# Main Gateway Dashboard for RedPulse.
+<img width="775" height="1599" alt="hm" src="https://github.com/user-attachments/assets/5aa5b512-1dd8-47d7-8a6b-6c62a1e4e7c7" />
+
+* Smart Routing: Directs users into two distinct workflows—"Continue as a Donor" (to view requests and donate) or "Continue as a Patient" (to request blood).
+* Live Status: The LIVE pulse indicator confirms real-time connection to active blood requests.
+
+Personalized UX: Features dynamic user greetings and an interactive health-tip carousel to boost engagement.
+
+
+
 
 
