@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SosNotiScreen extends StatefulWidget {
-  const SosNotiScreen({Key? key}) : super(key: key);
+  const SosNotiScreen({super.key});
 
   @override
   State<SosNotiScreen> createState() => _SosNotiScreenState();

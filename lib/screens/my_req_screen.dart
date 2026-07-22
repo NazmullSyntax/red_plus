@@ -5,7 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'view_res_screen.dart';
 
 class MyReqScreen extends StatefulWidget {
-  const MyReqScreen({Key? key}) : super(key: key);
+  const MyReqScreen({super.key});
 
   @override
   State<MyReqScreen> createState() => _MyReqScreenState();

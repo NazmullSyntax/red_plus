@@ -7,7 +7,7 @@ import 'my_req_screen.dart';
 import 'send_sos_screen.dart';
 
 class PatientScreen extends StatefulWidget {
-  const PatientScreen({Key? key}) : super(key: key);
+  const PatientScreen({super.key});
 
   @override
   State<PatientScreen> createState() => _PatientScreenState();

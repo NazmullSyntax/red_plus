@@ -59,6 +59,7 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
         "timestamp": FieldValue.serverTimestamp(),
       });
 
+      if (!mounted) return;
       setState(() => isLoading = false);
 
       ScaffoldMessenger.of(context).showSnackBar(
@@ -70,6 +71,7 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
 
       Navigator.pop(context);
     } catch (e) {
+      if (!mounted) return;
       setState(() => isLoading = false);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Error: $e"), backgroundColor: Colors.red),

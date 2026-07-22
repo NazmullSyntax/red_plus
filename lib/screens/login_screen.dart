@@ -35,6 +35,8 @@ class _LoginScreenState extends State<LoginScreen> {
         password: passwordController.text.trim(),
       );
 
+      if (!mounted) return;
+
       // ✅ Navigate to Welcome Screen
       Navigator.pushReplacement(
         context,
@@ -50,6 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   void showMessage(String msg) {
+    if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
   }
 

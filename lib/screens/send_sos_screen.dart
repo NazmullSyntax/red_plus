@@ -118,6 +118,7 @@ class _SendSosScreenState extends State<SendSosScreen> {
   }
 
   void _showMessage(String msg) {
+    if (!mounted) return;
     ScaffoldMessenger.of(
       context,
     ).showSnackBar(SnackBar(content: Text(msg), backgroundColor: Colors.red));
@@ -130,7 +131,7 @@ class _SendSosScreenState extends State<SendSosScreen> {
     showDialog(
       context: context,
       barrierDismissible: true,
-      barrierColor: Colors.black.withOpacity(0.2),
+      barrierColor: Colors.black.withValues(alpha: 0.2),
       builder: (_) {
         return Stack(
           children: [
@@ -202,7 +203,7 @@ class _SendSosScreenState extends State<SendSosScreen> {
 
     // ✅ AUTO CLOSE AFTER 3 SECONDS
     Future.delayed(const Duration(seconds: 3), () {
-      if (_popupClosed) return;
+      if (_popupClosed || !mounted) return;
       _popupClosed = true;
 
       Navigator.of(context).pop(); // close dialog
@@ -212,7 +213,7 @@ class _SendSosScreenState extends State<SendSosScreen> {
 
   // ✅ CLOSE WHEN BLUR IS TAPPED
   void _closePopupEarly() {
-    if (_popupClosed) return;
+    if (_popupClosed || !mounted) return;
     _popupClosed = true;
 
     Navigator.of(context).pop(); // close dialog

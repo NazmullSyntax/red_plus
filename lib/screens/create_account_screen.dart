@@ -133,12 +133,16 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
         setState(() => isLoading = false);
         _startOtpCooldown();
 
+        if (!mounted) return;
+
         final credential = await Navigator.push<PhoneAuthCredential>(
           context,
           MaterialPageRoute(
             builder: (_) => OtpScreen(verificationId: verificationId),
           ),
         );
+
+        if (!mounted) return;
 
         if (credential != null) {
           await _createAccount(credential);
@@ -177,9 +181,11 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
         "createdAt": Timestamp.now(),
       });
 
+      if (!mounted) return;
       showMessage("Account created successfully");
       Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
+      if (!mounted) return;
       showMessage(e.message ?? "Registration failed");
     } finally {
       setState(() => isLoading = false);
@@ -187,6 +193,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
   }
 
   void showMessage(String msg) {
+    if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
   }
 

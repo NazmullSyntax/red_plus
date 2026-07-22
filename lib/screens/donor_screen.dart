@@ -6,7 +6,7 @@ import 'create_post_screen.dart';
 import 'sos_noti_screen.dart';
 
 class DonorScreen extends StatefulWidget {
-  const DonorScreen({Key? key}) : super(key: key);
+  const DonorScreen({super.key});
 
   @override
   State<DonorScreen> createState() => _DonorScreenState();

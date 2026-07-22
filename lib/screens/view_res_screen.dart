@@ -4,7 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class ViewResScreen extends StatelessWidget {
   final String requestId;
-  const ViewResScreen({Key? key, required this.requestId}) : super(key: key);
+  const ViewResScreen({super.key, required this.requestId});
 
   void _call(String phone) async {
     if (phone.isEmpty) return;

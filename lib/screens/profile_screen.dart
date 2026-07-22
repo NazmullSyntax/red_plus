@@ -35,6 +35,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
     final doc = await _firestore.collection("users").doc(user!.uid).get();
 
+    if (!mounted) return;
+
     if (doc.exists) {
       setState(() {
         userName = doc.data()?["username"];
@@ -92,6 +94,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
   // 🚪 Logout
   Future<void> logout() async {
     await _auth.signOut();
+
+    if (!mounted) return;
 
     Navigator.pushAndRemoveUntil(
       context,
