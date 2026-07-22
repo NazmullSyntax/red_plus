@@ -140,8 +140,7 @@ Call Icon (Green): Quick action button to initiate a direct phone call to the re
 
 https://github.com/user-attachments/assets/39824158-8009-4fc1-b4b7-47d7614ffc5f
 
-# well in the first demo project there are some ui or ux desiagn problem we have see then we apply the new theme hope all people except it 
-now see our final project in one click 
+# after update this is the final project
 
 
 https://github.com/user-attachments/assets/7e475287-71bd-4183-8546-75ca82ba04d6
